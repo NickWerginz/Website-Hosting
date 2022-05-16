@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styleMain.css">
+    <title>Die schnellsten Tiere der Welt</title>
+</head>
+<body>
+<header>
+    Die schnellsten Tiere der Welt
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html" class="aktuelleSeite">Home</a></li>
+        <li><a href="gepard.html">Gepard</a></li>
+        <li><a href="gabelbock.html">Gabelbock</a></li>
+        <li><a href="gazelle.html">Gazelle</a></li>
+        <li><a href="wanderfalke.html">Wanderfalke</a></li>
+        <li class="Kontakt"><a href="Kontakt.html">Kontakt</a></li>
+
+    </ul>
+</nav>
+<main class="index">
+    <h2 class="überschrift">Die 4 schnellsten Tiere</h2>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="bilder/gepard.jpg" style="width: 100%">
+            <div class="text">Gepard</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="bilder/gabelbock.jpg" style="width:100%">
+            <div class="text">Gabelbock</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="bilder/gazelle.jpg" style="width:100%">
+            <div class="text">Gazelle</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="bilder/wanderfalke.jpg" style="width:100%">
+            <div class="text">Wanderfalke</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let count;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (count = 0; count < slides.length; count++) {
+                slides[count].style.display = "none";
+            }
+            for (count = 0; count < dots.length; count++) {
+                dots[count].className = dots[count].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</main>
+<aside>
+    <h1>Zoo Zürich</h1>
+    <strong>Ort:</strong> 8044 Zürich <br><br>
+    <strong>Strasse:</strong> Zürichbergstrasse 221<br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.277086564126!2d8.572342016019677!3d47.38702631111266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa0ea12b7a697%3A0x31929c3728d4b721!2sZoo%20Z%C3%BCrich!5e0!3m2!1sde!2sch!4v1648563765290!5m2!1sde!2sch"
+            width="240" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    .................................................
+    <br><br>
+    <strong>Anzahl Tiere:</strong> 4’673<br><br>
+    <strong>Telefon: </strong><a href="tel:044 254 25 00">044 254 25 00</a><br><br>
+    <strong>Website: </strong><a href="https://www.zoo.ch/de">Zoo Zürich</a><br><br>
+    <strong>Öffnungszeiten:</strong><br><br>
+    Montag 09:00–18:00<br>
+    Dienstag 09:00–18:00<br>
+    Mittwoch 09:00–18:00<br>
+    Donnerstag 09:00–18:00<br>
+    Freitag 09:00–18:00<br>
+    Samstag 09:00–18:00<br>
+    Sonntag 09:00–18:00 <br><br>
+    <strong>Besucherzahlen:</strong> 1'094'000 (2020)<br><br>
+    <strong>Fläche:</strong> 27 Hektar<br><br>
+    <strong>Eröffnet:</strong> 7. September 1929<br><br>
+    <strong>Exponate:</strong><br><br>
+    - Masoala Regenwald<br>
+    - Kaeng Krachan Elefantenpark<br>
+    - Zoolino<br>
+    - Mongolische Steppe<br>
+    - Himalaya-Anlage<br>
+    - Australien<br>
+    - Afrikanisches Gebirge<br>
+    - Löwenanlage<br>
+    - Menschenaffenhaus<br>
+    - alle Exponate <a
+        href="https://www.google.com/search?rlz=1C1CSMH_deCH967CH967&sxsrf=APq-WBvbPh8hcCO6T9SqiJhlj1fdtW_9xw:1648562986930&q=zoo+z%C3%BCrich+exponate&stick=H4sIAAAAAAAAAOPgE-LUz9U3MM0tTEvTEs1OttKvys8vBhFWqRUZmUmZJcWLWEWAXIWqw3uKMpMzFFIrCvLzEktSAey0Bzo7AAAA&sa=X&ved=2ahUKEwir3ubZv-v2AhX9i_0HHUL7BqgQ44YBKAF6BAhuEAM&biw=1920&bih=1049&dpr=1">hier</a>
+    <br><br>
+
+</aside>
+<footer>
+
+    <div>
+        <a href="Impressum.html">Impressum</a>
+    </div>
+
+</footer>
+</body>
+</html>
+
+
+
+
